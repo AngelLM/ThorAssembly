@@ -1,0 +1,31 @@
+[info]
+author = Ángel L.M.
+icon = 
+name = ThorAssembly
+title = 
+
+[paths]
+assets_dirs = projects/ThorAssembly/assets;
+blend_dirs = projects/ThorAssembly/blender;
+blender_exec = C:\Program Files\Blender Foundation\Blender\blender.exe
+build_dir = 
+deploy_dir = 
+
+[compile]
+apps = 
+css_ignore = 
+engine_type = webplayer_html
+ignore = 
+js_ignore = 
+optimization = simple
+use_physics = 
+
+[deploy]
+assets_path_dest = assets
+assets_path_prefix = assets
+ignore = 
+override = 
+
+[url_params]
+no_social = 
+
