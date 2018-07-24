@@ -14,11 +14,11 @@ deploy_dir =
 [compile]
 apps = 
 css_ignore = 
-engine_type = webplayer_html
+engine_type = webplayer_json
 ignore = 
 js_ignore = 
 optimization = simple
-use_physics = 
+use_physics = True
 
 [deploy]
 assets_path_dest = assets

@@ -1,0 +1,90 @@
+*:active {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -moz-tap-highlight-color: rgba(0,0,0,0);
+    tap-highlight-color: rgba(0,0,0,0);
+}
+
+h1,h2, h3{
+    color: white;
+    text-align: center;
+}
+
+body {
+  background-color: #000;
+  margin: 0;
+  overflow: hidden;
+}
+
+#global_container{
+ height:100%;
+}
+
+#main_canvas_container {
+  position: absolute;
+  right: 250px;
+  top: 0px;
+  left:0px;
+  width: auto;
+  height: 100%;
+}
+
+#sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 250px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /*Disable horizontal scroll*/
+    padding-top: 20px;
+    margin: 0 auto;
+}
+
+#buttons {
+    width: 188px;
+    margin: auto;
+
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 22px;
+    margin: 0px 5px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    -webkit-transition-duration: 0.4s; /*Safari */
+    transition-duration: 0.4s;
+    border-radius: 2px;
+}
+
+.button:hover {
+    background-color: white; /* White */
+    color: black;
+}
+
+#buttonReplay{
+    font-weight: bold;
+}
+
+#materials{
+    margin:20px auto;
+    width: 80%;
+}
+
+#list{
+    background-color: grey;
+    border-radius: 5px;
+    margin-top: -10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-height: 100%;
+}
