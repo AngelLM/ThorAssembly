@@ -11,7 +11,7 @@ var m_preloader = require("preloader");
 var m_ver       = require("version");
 var m_nla       = require("nla");
 
-var importantFrames = [4500,5000,2000,71,81,91,101,111,131,141,161,171,181,191,201,211,221,231,241,251];
+var importantFrames = [75, 125, 175, 275, 350, 425, 575];
 var animationIndex = 0;
 
 /*var materials = [
