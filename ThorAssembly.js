@@ -11,7 +11,7 @@ var m_preloader = require("preloader");
 var m_ver       = require("version");
 var m_nla       = require("nla");
 
-var importantFrames = [925,1400,2000,71,81,91,101,111,131,141,161,171,181,191,201,211,221,231,241,251];
+var importantFrames = [4500,5000,2000,71,81,91,101,111,131,141,161,171,181,191,201,211,221,231,241,251];
 var animationIndex = 0;
 
 /*var materials = [
@@ -75,6 +75,7 @@ function init_cb(canvas_elem, success) {
  */
 function load() {
     m_data.load(APP_ASSETS_PATH + "ThorAssembly.json", load_cb, preloader_cb);
+	//m_data.load("../assets/ThorAssembly.json", load_cb, preloader_cb);
 }
 
 /**
