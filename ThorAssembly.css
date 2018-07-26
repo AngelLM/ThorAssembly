@@ -47,6 +47,16 @@ body {
 
 }
 
+#StartButton{
+	display: none;
+    width: 188px;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+
 .button {
     background-color: #4CAF50;
     border: none;
@@ -81,10 +91,13 @@ body {
 }
 
 #list{
+    padding:10px;
+    margin: 0px;
+    list-style-type:none;
     background-color: grey;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: -10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     max-height: 100%;
 }
