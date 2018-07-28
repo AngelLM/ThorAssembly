@@ -43,7 +43,7 @@ var materials = [
 	[
 		["(1) Art4Body", "(12)  M3 Nut"],
 		["(2) 625ZZ Bearing"],
-		["(1) Art56MotorCoverRing", "(2) M3 Nut", "(1) M5 Nut", "(1) 625ZZ Bearing", "(1) CommonbearingFixThrough", "(2) M3x8mm Screw"],
+		["(1) Art56MotorCoverRing", "(2) M3 Nut", "(1) M5 Nut", "(1) 625ZZ Bearing", "(1) BearingFixTH", "(2) M3x8mm Screw"],
 		["(1) Art56GearPlate", "(1) 625ZZ Bearing", "(3) M3 Nut"],
 		["(1) M5x18mm Screw"],
 		["(1) 102x5mm Rod", "(2) Art56SmallGear", "(2) GT2x40 Pulley", "(2) GT2x208 Belt", "(2) M3x6mm Screw"],
@@ -65,9 +65,9 @@ var materials = [
 		["(1) Art4MotorGear", "(1) M3 Nut", "(1) M3x8mm Screw"],
 		["(2) M3x6mm Screw"],
 		["(1) M3 Nut", "(1) OptoSwitch", "(1) M3x8mm Screw"],
-		["(1) 625ZZ Bearing", "(1) CommonbearingFixThrough", "(2) M3x8mm Screw"],
+		["(1) 625ZZ Bearing", "(1) BearingFixTH", "(2) M3x8mm Screw"],
 		["(1) Art23Optodisk", "(2) M3x8mm Screw"],
-		["(1) Art3Pulley", "(2) M3 Nut", "(1) 625ZZ Bearing", "(1) CommonbearingFixThrough", "(2) M3x8mm Screw"],
+		["(1) Art3Pulley", "(2) M3 Nut", "(1) 625ZZ Bearing", "(1) BearingFixTH", "(2) M3x8mm Screw"],
 		["(1) GT2 Belt", "(1) M3 Nut", "(1) M3x16mm Screw"],
 		["(3) M3x25mm Screw"]
 	],
@@ -81,7 +81,7 @@ var materials = [
 		["(2) Art2MotorGear", "(2) M3 Nut", "(2) M3x8mm Screw", "(1) GT2x20 Pulley"],
 		["(1) Art2BodyACover", "(10) M3x40mm Screw"],
 		["(8) M3x20mm Screw"],
-		["(1) 625ZZ Bearing", "(1) CommonbearingFixThrough", "(2) M3x8mm Screw"],
+		["(1) 625ZZ Bearing", "(1) BearingFixTH", "(2) M3x8mm Screw"],
 		["(1) Art23Optodisk", "(2) M3x8mm Screw"]
 	],
 	[
@@ -90,9 +90,9 @@ var materials = [
 		["(2) MF84ZZ Bearing", "(2) Art3TensionerPulley"],
 		["(1) Art2BodyACover", "(1) M3x12mm Screw"],
 		["(1) Art2BodyAWindow", "(2) M3 Nut", "(3) M3x12mm Screw"],
-		["(2) 625ZZ Bearing", "(2) CommonbearingFix", "(4) M3x8mm Screw"],
+		["(2) 625ZZ Bearing", "(2) BearingFix", "(4) M3x8mm Screw"],
 		["(1) Art2BodyB", "(10) M3 Nut"],
-		["(2) 625ZZ Bearing", "(2) CommonbearingFix", "(4) M3x8mm Screw"],
+		["(2) 625ZZ Bearing", "(2) BearingFix", "(4) M3x8mm Screw"],
 		["(2) OptoSwitch", "(4) M3x8mm Screw"],
 		["(1) Art2BodyBCover", "(2) M3x12mm Screw"],
 		["(1) Art2Union", "(8) M3 Nut", "(4) M3x40mm Screw"]
@@ -315,17 +315,16 @@ function load_cb(data_id, success) {
     m_app.enable_camera_controls();
     m_nla.stop();
 	var camera = m_scenes.get_active_camera();
-	var TARGET_DIST_LIMITS = { min: 1000, max: 5000 };
-	var POS = new Float32Array([707.03, -1257.05, 843.869]);
-	var LOOK_AT = new Float32Array([0, 95, 350]);
+	var TARGET_DIST_LIMITS = { min: 2500, max: 5000 };
+	var POS = new Float32Array([870.15631, -1567.94568, 980.14307]);
+	var LOOK_AT = new Float32Array([0, 95, 250]);
+	m_nla.set_frame(9999);
 	m_cam.set_velocities(camera, {zoom:0.01});
+	m_cam_ani.auto_rotate(0.2);
 	m_cam.target_setup(camera, { pos: POS, pivot: LOOK_AT,
         dist_lim: TARGET_DIST_LIMITS, use_panning: false});
-	m_cam_ani.auto_rotate(0.2);
-	m_nla.set_frame(9999);
+	document.getElementById("LogoThor").style.display = "block";
 	document.getElementById("StartButton").style.display = "block";
-	
-	
 }
 
 function button_start_assembly_click(e) {
