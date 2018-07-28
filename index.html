@@ -17,25 +17,32 @@
 </head>
 
 <body>
-  <!-- <img id="button1" src="button.png" style="position:relative; z-index: 1"> -->
-  <!-- <img id="button2" src="button2.png" style="position:relative; z-index: 1"> -->
-
 <div id="global_container">
+	<a href="https://github.com/AngelLM/Thor"><img id="LogoThor" src="assets/ThorLogo.png"></a>
     <div id="sidenav">
-        <h1>Gripper</h1>
+        <h1 id="stepTitle">GRIPPER</h1>
         <h2 id="stepCounter">0/6</h2>
         <div id="buttons">
-            <button id="buttonPrevious" class="button">◄</button>
-            <button id="buttonReplay" class="button">⟲</button>
-            <button id="buttonNext" class="button">►</button>
+			<button id="buttonPreviousStep" class="button" title="Previous part">⏮</button>
+            <button id="buttonPrevious" class="button" title="Previous step">◄</button>
+            <button id="buttonReplay" class="button" title="Repeat last step">⟲</button>
+            <button id="buttonNext" class="button" title="Next step">►</button>
+			<button id="buttonNextStep" class="button"title="Next part">⏭</button>
         </div>
         <div id="materials">
             <h3>Materials</h3>
             <ul id="list">
             </ul>
         </div>
+		<div id="sidebartext">
+			<p>Made by <a href="http://wwww.angel-lm.com">Ángel L.M.</a> using <a href="https://www.blender.org/">Blender</a> & <a href="https://www.blend4web.com">Blend4Web</a></p>
+			<p><a href="https://github.com/AngelLM/ThorAssembly">Shared</a> under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0 License</a></p> 
+		</div>
     </div>
     <div id="main_canvas_container">
+		<div class="StartContainer" id="StartButton">
+			<div class="ButtonPicture"></div>
+		</div>
     </div>
 </div>
 

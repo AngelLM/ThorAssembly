@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Baloo)
+
 *:active {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -moz-tap-highlight-color: rgba(0,0,0,0);
@@ -7,6 +9,15 @@
 h1,h2, h3{
     color: white;
     text-align: center;
+	font-family: 'Baloo',normal;
+}
+
+h1{
+    margin-bottom: -0.25em;
+}
+
+h2{
+    margin-top: 0em;
 }
 
 body {
@@ -21,53 +32,90 @@ body {
 
 #main_canvas_container {
   position: absolute;
-  right: 250px;
   top: 0px;
   left:0px;
+  right:0px;
   width: auto;
   height: 100%;
+  transition: margin-right 2s;
 }
 
 #sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 250px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
     right: 0;
-    background-color: #111; /* Black */
-    overflow-x: hidden; /*Disable horizontal scroll*/
+    background-color: #111;
+    overflow-x: hidden;
     padding-top: 20px;
     margin: 0 auto;
+	transition: width .5s;
 }
 
 #buttons {
-    width: 188px;
+    width: auto;
     margin: auto;
+    text-align: center;
 
 }
+
+
+#LogoThor{
+	width: 200px;
+	position: absolute;
+    left: 0%;
+    bottom: 5px;
+    z-index: 1;
+	display: none;
+}
+
+
+.StartContainer{
+	width: 250px;
+	height: 107px;
+	position: absolute;
+    left: 50%;
+    bottom: 5px;
+    z-index: 1;
+	display: none;
+    transform: translate(-50%, -50%);
+}
+
+.ButtonPicture {
+    height:107px;
+    width: 250px;
+    background-image: url('assets/StartButton.png');
+    background-repeat:no-repeat;
+}
+
+.ButtonPicture:hover {
+    background-image: url('assets/SthorButton.png');
+}
+
 
 .button {
     background-color: #4CAF50;
     border: none;
     color: white;
-    width: 50px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 22px;
-    margin: 0px 5px;
+    font-size: 18px;
+    margin: 0px;
     cursor: pointer;
     position: relative;
     z-index: 1;
-    -webkit-transition-duration: 0.4s; /*Safari */
+    -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     border-radius: 2px;
 }
 
 .button:hover {
-    background-color: white; /* White */
+    background-color: white;
     color: black;
 }
 
@@ -81,10 +129,28 @@ body {
 }
 
 #list{
+    padding:10px;
+    margin: 0px;
+    list-style-type:none;
     background-color: grey;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: -10px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     max-height: 100%;
+}
+
+#sidebartext{
+    font-size: 14px;
+    position: absolute;
+    color: white;
+    padding:30px;
+    bottom: 0px;
+    text-align: center;
+    
+}
+
+a {
+    color: cyan;
+	text-decoration: none;
 }
