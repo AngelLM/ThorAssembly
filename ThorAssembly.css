@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Baloo)
+
 *:active {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
     -moz-tap-highlight-color: rgba(0,0,0,0);
@@ -7,6 +9,15 @@
 h1,h2, h3{
     color: white;
     text-align: center;
+	font-family: 'Baloo',normal;
+}
+
+h1{
+    margin-bottom: -0.25em;
+}
+
+h2{
+    margin-top: 0em;
 }
 
 body {
@@ -21,16 +32,17 @@ body {
 
 #main_canvas_container {
   position: absolute;
-  right: 250px;
   top: 0px;
   left:0px;
+  right:0px;
   width: auto;
   height: 100%;
+  transition: margin-right .5s;
 }
 
 #sidenav {
     height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 250px; /* Set the width of the sidebar */
+    width: 0px; /* Set the width of the sidebar */
     position: fixed; /* Fixed Sidebar (stay in place on scroll) */
     z-index: 1; /* Stay on top */
     top: 0; /* Stay at the top */
@@ -42,8 +54,9 @@ body {
 }
 
 #buttons {
-    width: 188px;
+    width: auto;
     margin: auto;
+    text-align: center;
 
 }
 
@@ -61,13 +74,13 @@ body {
     background-color: #4CAF50;
     border: none;
     color: white;
-    width: 50px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 22px;
-    margin: 0px 5px;
+    font-size: 18px;
+    margin: 0px;
     cursor: pointer;
     position: relative;
     z-index: 1;

@@ -17,13 +17,13 @@ var m_cam 		= b4w.require("camera");
 var animationIndex = 0;
 var partIndex = 0;
 
-var assemblyTitles = ["Gripper", "Articulations 5&6", "Articulation 3&4", "Top Union", "Articulation 1", "Articulation 2", "Mid Union", "Base", "Bottom Union"]
+var assemblyTitles = ["GRIPPER", "ART 5&6", "ART 3&4", "TOP UNION", "ART 1", "ART 2", "MID UNION", "BASE", "BOT UNION"]
 
 var keyframes = [
 	[75, 125, 175, 275, 350, 400, 500],
 	[900, 950, 975, 1075, 1125, 1175, 1350, 1400, 1450, 1500, 1625, 1675, 1700, 1725, 1800, 1975, 2075],
 	[2200, 2300, 2375, 2450, 2525, 2625, 2700, 2775, 2825, 2900, 2950, 3000],
-	[3175, 3360, 3500],
+	[3175, 3350, 3500],
 	[4625, 4700, 4725, 4800, 4850, 4875, 4950, 5025],
 	[6250, 6325, 6425, 6475, 6525, 6600, 6675, 6825, 6900, 6950, 7000, 7075],
 	[7075, 7325, 7375, 7500, 7625, 7750, 7800],
@@ -131,7 +131,7 @@ var materials = [
 
 var showObjects = [
 	[
-		['BG00', 'BG01', 'BG01.001', 'BG02', 'BG04', 'BG05', 'BG06', 'BG07', 'BG25', 'BG26'],
+		['00_Table', 'BG00', 'BG01', 'BG01.001', 'BG02', 'BG04', 'BG05', 'BG06', 'BG07', 'BG25', 'BG26'],
 		['BG08', 'BG09', 'BG10', 'BG11', 'BG12'],
 		['BG13', 'BG14', 'BG15', 'BG16', 'BG17'],
 		['BG18', 'BG19', 'BG20', 'BG21', 'BG22'],
@@ -218,8 +218,7 @@ var showObjects = [
 		['BC091', 'BC092', 'BC093', 'BC094'],
 		['BC095', 'BC096'],
 		['BC097', 'BC098', 'BC099', 'BC100'],
-		['BC101', 'BC102', 'BC103', 'BC104', 'BC105', 'BC106', 'BC107', 'BC108'],
-		['BC109', 'BC110']
+		['BC101', 'BC102', 'BC103', 'BC104', 'BC105', 'BC106', 'BC107', 'BC108', 'BC109', 'BC110']
 	],
 	[
 		['BC111', 'BC112', 'BC113', 'BC114'],
@@ -323,7 +322,7 @@ function load_cb(data_id, success) {
 	m_cam.target_setup(camera, { pos: POS, pivot: LOOK_AT,
         dist_lim: TARGET_DIST_LIMITS, use_panning: false});
 	m_cam_ani.auto_rotate(0.2);
-	m_nla.set_frame(10000);
+	m_nla.set_frame(9999);
 	document.getElementById("StartButton").style.display = "block";
 	
 	
@@ -331,6 +330,8 @@ function load_cb(data_id, success) {
 
 function button_start_assembly_click(e) {
     document.getElementById("StartButton").style.display = "none";
+	document.getElementById("sidenav").style.width = "250px";
+    document.getElementById("main_canvas_container").style.marginRight = "250px";
 	m_cam_ani.auto_rotate(0);
 	hideAllObjects();
 	m_cam.eye_setup(m_scenes.get_active_camera())
