@@ -1,7 +1,7 @@
 # ThorAssembly
 [Thor](https://github.com/AngelLM/Thor) Assembly displayed in web browser, using [Blend4Web](https://www.blend4web.com/en/). 
 
-<img src="assets/ThorAssembly.png" width="600">
+<img src="assets/ThorAssemblyPreview.png" width="600">
 
 More info about Thor robot at [Thor's Hackaday page](https://hackaday.io/project/12989-thor)
 
